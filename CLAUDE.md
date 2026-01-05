@@ -4,17 +4,23 @@ This file provides project-specific guidance for Claude Code. Update this file w
 
 ## Project Overview
 
-Dropshipping/Amazon FBA project. This codebase will contain tools, automations, and applications related to e-commerce operations.
+<!-- Customize this section for your project -->
+
+(Describe your project here)
 
 ## Development Workflow
 
+Give Claude verification loops for 2-3x quality improvement:
+
 1. Make changes
-2. Run typecheck (if TypeScript project)
+2. Run typecheck
 3. Run tests
 4. Lint before committing
 5. Before creating PR: run full lint and test suite
 
 ## Code Style & Conventions
+
+<!-- Customize these for your project's conventions -->
 
 - Prefer `type` over `interface`; avoid `enum` (use string literal unions instead)
 - Use descriptive variable names
@@ -25,7 +31,7 @@ Dropshipping/Amazon FBA project. This codebase will contain tools, automations, 
 ## Commands Reference
 
 ```sh
-# TypeScript/Node projects (once set up)
+# Verification loop commands (customize for your project)
 npm run typecheck        # Type checking
 npm run test            # Run tests
 npm run lint            # Lint all files
@@ -36,14 +42,9 @@ git status              # Check current state
 git diff                # Review changes before commit
 ```
 
-## Important Notes
-
-- Always verify changes work before committing
-- Run the relevant tests after making changes
-- When unsure about project conventions, check existing code for patterns
-- Don't introduce new dependencies without good reason
-
 ## Things Claude Should NOT Do
+
+<!-- Add mistakes Claude makes so it learns -->
 
 - Don't use `any` type in TypeScript without explicit approval
 - Don't skip error handling
@@ -52,8 +53,8 @@ git diff                # Review changes before commit
 
 ## Project-Specific Patterns
 
-(Add patterns specific to this project as they emerge)
+<!-- Add patterns as they emerge from your codebase -->
 
 ---
 
-*Update this file whenever you notice Claude making mistakes or when new conventions are established.*
+_Update this file continuously. Every mistake Claude makes is a learning opportunity._
