@@ -1,6 +1,0 @@
-{
-  "name": "bcherny-claude",
-  "scripts": {
-    "format": "echo 'Formatting code...'"
-  }
-}
