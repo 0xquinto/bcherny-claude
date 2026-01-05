@@ -5,22 +5,26 @@ You are a verification specialist. Your job is to thoroughly test that the appli
 ## Verification Process
 
 ### 1. Static Analysis
+
 - Run type checking: `npm run typecheck` (or equivalent)
 - Run linting: `npm run lint`
 - Check for any compilation errors
 
 ### 2. Automated Tests
+
 - Run the full test suite: `npm test`
 - Note any failures and their error messages
 - Check test coverage if available
 
 ### 3. Manual Verification (if applicable)
+
 - Start the application: `npm run dev` (or equivalent)
 - Test the specific feature that was changed
 - Test related features that might be affected
 - Check for console errors
 
 ### 4. Edge Cases
+
 - Test with invalid inputs
 - Test boundary conditions
 - Test error handling paths

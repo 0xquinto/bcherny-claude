@@ -28,6 +28,7 @@ Work through six phases, but within each phase, have a natural dialogue. Ask one
 Don't skip this. Most failed analyses come from solving the wrong problem.
 
 Start by understanding what we're actually trying to achieve. Ask questions like:
+
 - What's the core problem in your own words?
 - What would success look like concretely?
 - Why does this problem exist?
@@ -40,6 +41,7 @@ Stay here until the problem is crystal clear. If it feels fuzzy, keep asking.
 Now list everything we're assuming - especially the "obvious" stuff that nobody questions.
 
 Explore together:
+
 - What do we assume to be true about this problem?
 - What's "just how it's done" in this space?
 - What would someone with zero context find strange?
@@ -52,6 +54,7 @@ Present assumptions back conversationally: "So we're assuming X, Y, and Z - does
 This is the core of first principles. Take each assumption and interrogate it.
 
 For each one, explore:
+
 - Is this actually true? What's the evidence?
 - Why do we believe this? Where did it come from?
 - What if the opposite were true?
@@ -66,6 +69,7 @@ Flag each as: **Fundamental** (keep) or **Convention** (question further)
 After the questioning, take stock of what remains. These are your building blocks.
 
 Reflect together:
+
 - What constraints are actually real?
 - What requirements are truly non-negotiable?
 - What's left when we strip away the conventions?
@@ -79,6 +83,7 @@ Don't proceed until there's agreement on the foundation.
 Now the creative part. Forget how it's currently done. Using ONLY the fundamentals, explore what's possible.
 
 Guide the exploration:
+
 - If we were starting fresh today, what would we build?
 - How do completely different domains solve similar problems?
 - What becomes possible now that we've dropped [convention]?
@@ -90,6 +95,7 @@ Propose 2-3 radically different approaches. Lead with your recommendation and re
 Before committing, stress-test the new approach.
 
 Explore:
+
 - Does this actually solve the core problem from Phase 1?
 - What new assumptions have we introduced?
 - What could go wrong?
@@ -103,24 +109,26 @@ Be willing to loop back if something doesn't hold up.
 
 Keep these in your back pocket for any phase:
 
-| When you need to... | Ask... |
-|---------------------|--------|
-| Clarify | "What do you mean by...?" / "Can you give an example?" |
-| Challenge | "What if that weren't true?" / "Who says?" |
-| Probe evidence | "How do we know?" / "Are there counterexamples?" |
-| Shift perspective | "How would an outsider see this?" / "What's the opposite?" |
-| Test consequences | "What happens if...?" / "What could go wrong?" |
+| When you need to... | Ask...                                                     |
+| ------------------- | ---------------------------------------------------------- |
+| Clarify             | "What do you mean by...?" / "Can you give an example?"     |
+| Challenge           | "What if that weren't true?" / "Who says?"                 |
+| Probe evidence      | "How do we know?" / "Are there counterexamples?"           |
+| Shift perspective   | "How would an outsider see this?" / "What's the opposite?" |
+| Test consequences   | "What happens if...?" / "What could go wrong?"             |
 
 ---
 
 ## After the Analysis
 
 **Document it:**
+
 - Write to `docs/plans/YYYY-MM-DD-<topic>-first-principles.md`
 - Capture: problem, assumptions challenged, fundamentals, new approach
 - Commit to git
 
 **If implementing:**
+
 - Create plan from the new mental model
 - Watch for old assumptions creeping back in during implementation
 

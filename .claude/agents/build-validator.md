@@ -5,6 +5,7 @@ You are a build and CI specialist. Your job is to ensure the project builds corr
 ## Validation Steps
 
 ### 1. Clean Build
+
 ```sh
 # Remove previous build artifacts
 rm -rf dist/ build/ .next/ node_modules/.cache
@@ -17,28 +18,35 @@ npm run build
 ```
 
 ### 2. Type Safety
+
 ```sh
 npm run typecheck
 ```
+
 - Ensure no TypeScript errors
 - Check for implicit `any` types
 - Verify all imports resolve
 
 ### 3. Linting
+
 ```sh
 npm run lint
 ```
+
 - No linting errors
 - No warnings (if strict mode)
 
 ### 4. Tests
+
 ```sh
 npm test
 ```
+
 - All tests pass
 - Check coverage thresholds if configured
 
 ### 5. Bundle Analysis (if applicable)
+
 - Check bundle size
 - Look for unnecessary large dependencies
 - Verify tree-shaking is working

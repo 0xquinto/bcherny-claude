@@ -7,27 +7,31 @@ Boris is the creator of Claude Code at Anthropic, and this setup reflects his pe
 ## What's Included
 
 ### CLAUDE.md
+
 Project-specific instructions that Claude reads on startup. Update this file whenever Claude makes a mistake so it learns not to repeat it.
 
 ### Slash Commands (`.claude/commands/`)
-| Command | Description |
-|---------|-------------|
-| `/commit-push-pr` | Commit, push, and open a PR |
-| `/quick-commit` | Stage all changes and commit with a descriptive message |
-| `/test-and-fix` | Run tests and fix any failures |
-| `/review-changes` | Review uncommitted changes and suggest improvements |
-| `/first-principles` | Deconstruct problems to fundamental truths |
+
+| Command             | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `/commit-push-pr`   | Commit, push, and open a PR                             |
+| `/quick-commit`     | Stage all changes and commit with a descriptive message |
+| `/test-and-fix`     | Run tests and fix any failures                          |
+| `/review-changes`   | Review uncommitted changes and suggest improvements     |
+| `/first-principles` | Deconstruct problems to fundamental truths              |
 
 ### Subagents (`.claude/agents/`)
-| Agent | Purpose |
-|-------|---------|
-| `code-simplifier` | Simplify code after Claude is done working |
-| `code-architect` | Design reviews and architectural decisions |
-| `verify-app` | Thoroughly test the application works correctly |
-| `build-validator` | Ensure project builds correctly for deployment |
-| `oncall-guide` | Help diagnose and resolve production issues |
+
+| Agent             | Purpose                                         |
+| ----------------- | ----------------------------------------------- |
+| `code-simplifier` | Simplify code after Claude is done working      |
+| `code-architect`  | Design reviews and architectural decisions      |
+| `verify-app`      | Thoroughly test the application works correctly |
+| `build-validator` | Ensure project builds correctly for deployment  |
+| `oncall-guide`    | Help diagnose and resolve production issues     |
 
 ### Settings (`.claude/settings.json`)
+
 - **Pre-allowed permissions**: Common safe commands (npm, git, gh, etc.) won't prompt for approval
 - **PostToolUse hook**: Auto-formats code after Write/Edit operations
 
@@ -43,6 +47,7 @@ Project-specific instructions that Claude reads on startup. Update this file whe
 ## How to Use This Repo
 
 ### Option 1: Copy to Your Project
+
 Copy the `.claude/` folder and `CLAUDE.md` to the root of your existing project:
 
 ```sh
@@ -51,6 +56,7 @@ cp /path/to/bcherny-claude/CLAUDE.md /path/to/your-project/
 ```
 
 ### Option 2: Use as a Template
+
 Clone this repo and use it as a starting point for a new project:
 
 ```sh
@@ -61,7 +67,9 @@ git init
 ```
 
 ### Option 3: Cherry-pick What You Need
+
 Copy only specific files you want:
+
 - Just want slash commands? Copy `.claude/commands/`
 - Just want subagents? Copy `.claude/agents/`
 - Just want permissions? Copy `.claude/settings.json`
@@ -75,6 +83,7 @@ Copy only specific files you want:
 ### Using the Commands
 
 In Claude Code, type `/` to see available commands:
+
 ```
 /commit-push-pr     # Full git workflow
 /quick-commit       # Fast commit
@@ -86,6 +95,7 @@ In Claude Code, type `/` to see available commands:
 ### Using Subagents
 
 Ask Claude to use a subagent:
+
 ```
 "Use the code-simplifier agent to clean up the code I just wrote"
 "Run the verify-app agent to test everything works"
