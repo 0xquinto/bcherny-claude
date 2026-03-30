@@ -65,6 +65,25 @@ Keep iterating until the mistake rate measurably drops.
 - For fully parallel workstreams, use git worktrees:
   `git worktree add .claude/worktrees/<name> origin/main`
 
+## Automation
+
+- Use `/loop` to run a skill on a recurring interval (e.g., `/loop 5m /babysit`)
+- Use `/schedule` to schedule Claude to run on a cron-based schedule, up to a week
+- Turn repetitive workflows into skills, then loop them for hands-free automation
+
+## Session Management
+
+- Use `/branch` to fork a session, or `claude --resume <session-id> --fork-session` from CLI
+- Use `/btw` for side queries without interrupting the agent's current work
+- Use `/teleport` to continue a cloud session on your local machine
+- Use `/remote-control` to control a local session from your phone or browser
+- Use `/voice` (CLI) or the voice button (Desktop) for voice input
+
+## Multi-Repo Work
+
+- Use `--add-dir` (or `/add-dir`) to give Claude access to additional repositories
+- Add `"additionalDirectories"` to settings.json to always load extra folders on startup
+
 ## Things Claude Should NOT Do
 
 <!-- Add mistakes Claude makes so it learns -->

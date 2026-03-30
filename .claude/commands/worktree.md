@@ -6,4 +6,5 @@ Steps:
 2. Run: `git worktree add .claude/worktrees/$name origin/main`
 3. Confirm the worktree was created successfully
 4. Print the launch command: `cd .claude/worktrees/$name && claude`
-5. Remind the user they can list worktrees with `git worktree list` and remove with `git worktree remove .claude/worktrees/$name`
+5. Remind the user they can also use `claude -w` to start a new session directly in a worktree
+6. Remind the user they can list worktrees with `git worktree list` and remove with `git worktree remove .claude/worktrees/$name`

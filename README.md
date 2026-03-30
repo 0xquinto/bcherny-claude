@@ -87,6 +87,58 @@ Based on [Boris Cherny's thread (Jan 2026)](https://x.com/bcherny/status/2017742
 
 - The team recommends Ghostty for its synchronized rendering and unicode support
 
+## Power Features (March 2026)
+
+Based on [Boris Cherny's thread (Mar 2026)](https://x.com/bcherny/status/2038454336355999749) sharing his favorite hidden and under-utilized Claude Code features.
+
+### Mobile & Cross-Device
+
+- Claude Code has a mobile app (iOS/Android) — open the Claude app and use the Code tab
+- Use `/teleport` or `claude --teleport` to continue a cloud session on your local machine
+- Use `/remote-control` to control a local session from your phone or browser
+- Set "Enable Remote Control for all sessions" in `/config` for always-on access
+
+### Automation & Scheduling
+
+- `/loop` runs a skill on a recurring interval (e.g., `/loop 5m /babysit` for auto code review and rebase)
+- `/schedule` runs Claude on a cron schedule, up to a week at a time
+- Example loops: auto-address code review, auto-rebase PRs, sweep post-merge comments, prune stale PRs
+- Turn workflows into skills, then loop them for hands-free automation
+
+### Hooks
+
+- Use hooks to run deterministic logic at each stage of the agent lifecycle
+- `SessionStart` — dynamically load context when Claude starts
+- `PreToolUse` — log every bash command the model runs
+- `PermissionRequest` — route approval prompts to WhatsApp or other channels
+- `Stop` — poke Claude to keep going whenever it stops
+- Docs: https://code.claude.com/docs/en/hooks
+
+### Desktop & Browser Integration
+
+- **Cowork Dispatch** — secure remote control for Claude Desktop; catch up on Slack, emails, manage files from mobile
+- **Chrome extension** — connect Claude to your browser for frontend work; Claude iterates until the result looks right
+- **Desktop app** — auto-starts web servers and tests them in a built-in browser
+
+### Session Management
+
+- `/branch` forks your current session; or use `claude --resume <session-id> --fork-session` from CLI
+- `/btw` answers quick side questions without interrupting the agent's current work
+- `/voice` enables voice input — hold space bar in CLI, or use the voice button in Desktop
+
+### Parallel Work at Scale
+
+- `claude -w` starts a new session directly in a git worktree
+- `/batch` fans out massive changesets to dozens, hundreds, or thousands of worktree agents
+- Use `WorktreeCreate` hook for non-git VCS worktree creation
+
+### SDK & CLI Flags
+
+- `--bare` speeds up SDK startup by up to 10x — skips auto-loading CLAUDE.md, settings, MCPs
+- `--add-dir` (or `/add-dir`) gives Claude access to additional repos; also grants permissions there
+- `--agent=<name>` runs a custom agent defined in `.claude/agents/` — works for non-interactive mode too
+- Add `"additionalDirectories"` to settings.json to always load extra folders
+
 ## How to Use This Repo
 
 ### Option 1: Copy to Your Project
@@ -151,3 +203,4 @@ Ask Claude to use a subagent:
 
 - Original setup: https://x.com/bcherny/status/2007179832300581177
 - Team tips (Jan 2026): https://x.com/bcherny/status/2017742741636321619
+- Power features (Mar 2026): https://x.com/bcherny/status/2038454336355999749

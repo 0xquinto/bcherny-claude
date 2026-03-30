@@ -35,6 +35,28 @@
     "deny": []
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Session started at $(date). Branch: $(git branch --show-current 2>/dev/null || echo 'N/A'). Last commit: $(git log --oneline -1 2>/dev/null || echo 'N/A').\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"If there is remaining work, keep going. Check your task list.\""
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
